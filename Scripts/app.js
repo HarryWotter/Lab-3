@@ -1,5 +1,4 @@
 /**
- * Name: Roshan Persaud
  * CreatedBy: Tom Tsiliopoulus
  * EditedBy: Roshan Persaud
  * StudentID: 100560748
@@ -150,6 +149,10 @@ let app;
                         break; 
                     case "login":
                         LoadPageContent("mainContent", "./Views/content/login.html", DisplayLoginContent);
+                        break;
+                    // Part 2.a) - inject tasklist into home page
+                    case "tasklist":
+                        LoadPageContent("mainContent", ".tasklist.html", DisplayTasklistContent);
                         break;
                 }
             }); 
@@ -435,6 +438,12 @@ let app;
                 $(this).closest("li").remove();
             }    
         });
+    }
+
+    // Part 2.a)
+    function DisplayTasklistContent()
+    {
+        document.title = "WEBD6201 - Tasklist";
     }
 
     /**
